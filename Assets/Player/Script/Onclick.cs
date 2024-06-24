@@ -31,14 +31,22 @@ public class Onclick : MonoBehaviour
     {
         if (rightactived)
         {
+            player.transform.rotation =
+                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, -60, 0), 1.2f*Time.deltaTime);
             rb.position += new Vector2(1.5f*Time.deltaTime, 0);
         }
-
         if (leftactived)
         {
+            player.transform.rotation =
+                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 60, 0), 1.2f*Time.deltaTime);
             rb.position -= new Vector2(1.5f*Time.deltaTime, 0);
         }
 
+        if (!rightactived && !leftactived)
+        {
+            player.transform.rotation =
+                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 0, 0), 1.2f*Time.deltaTime);
+        }
         if (isfiring&&canfire)
         {
             StartCoroutine(OnFireFlow());
@@ -81,4 +89,5 @@ public class Onclick : MonoBehaviour
         yield return new WaitForSeconds(fireduration);
         canfire = true;
     }
+    
 }
