@@ -32,14 +32,14 @@ public class Onclick : MonoBehaviour
         if (rightactived)
         {
             player.transform.rotation =
-                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, -60, 0), 1.2f*Time.deltaTime);
-            rb.position += new Vector2(1.5f*Time.deltaTime, 0);
+                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, -50, 0), 1.4f*Time.deltaTime);
+            rb.position += new Vector2(2.1f*Time.deltaTime, 0);
         }
         if (leftactived)
         {
             player.transform.rotation =
-                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 60, 0), 1.2f*Time.deltaTime);
-            rb.position -= new Vector2(1.5f*Time.deltaTime, 0);
+                Quaternion.Slerp(player.transform.rotation, Quaternion.Euler(0, 50, 0), 1.4f*Time.deltaTime);
+            rb.position -= new Vector2(2.1f*Time.deltaTime, 0);
         }
 
         if (!rightactived && !leftactived)
