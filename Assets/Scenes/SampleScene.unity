@@ -1139,7 +1139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 269182852}
   bulllet: {fileID: 4798227062092560798, guid: ddcb405693ccede4bb5845f130a98a57, type: 3}
-  fireduration: 0.5
+  fireduration: 0.2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
