@@ -6344,6 +6344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 140636263}
+  Text: {fileID: 1326525009}
+  stagekillrequiered: 0300000003000000
 --- !u!4 &1068777013
 Transform:
   m_ObjectHideFlags: 0
