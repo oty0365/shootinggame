@@ -6343,6 +6343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb12245fffc1bc246b8473a65da727bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentstage: 1
   ani: {fileID: 140636263}
   Text: {fileID: 1326525009}
   stagekillrequiered: 0300000003000000
