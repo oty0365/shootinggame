@@ -7,6 +7,7 @@ public class Datamanager : MonoBehaviour
 {
     public string path;
     public string file = "player.txt";
+    public PlayerStatus data;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,10 @@ public class Datamanager : MonoBehaviour
     }
     public void Load()
     {
-        
+        data = new PlayerStatus();
+        string json = ReadFromFile(file);
+        JsonUtility.FromJsonOverwrite(json, data);
+
     }
     public void Save()
     {
@@ -54,5 +58,11 @@ public class Datamanager : MonoBehaviour
                 return json;
             }
         }
+        else
+        {
+            Debug.Log("FileNotFound");
+        }
+
+        return "";
     }
 }

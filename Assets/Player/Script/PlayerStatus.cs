@@ -8,7 +8,7 @@ using File = UnityEngine.Windows.File;
 public class PlayerStatus : MonoBehaviour
 {
 
-    public static int playerhp;
+    public static int playerhp = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -22,4 +22,5 @@ public class PlayerStatus : MonoBehaviour
     {
         
     }
+    
 }
