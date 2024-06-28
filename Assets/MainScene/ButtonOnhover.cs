@@ -63,8 +63,12 @@ public class ButtonOnhover : MonoBehaviour
 
     public void OnClick1()
     {
-        StageManager.EnterType = 2;
-        SceneManager.LoadScene("Stage1");
+        StageData data = SaveSystem.LoadStage();
+        if (data != null)
+        {
+            StageManager.EnterType = 2;
+            SceneManager.LoadScene("Stage1");   
+        }
     }
 
     public void OnClick2()
