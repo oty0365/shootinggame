@@ -9,14 +9,25 @@ public class StageManager : MonoBehaviour
 {
     //public static int stage=1;
     public int currentstage=1;
+    public static int stage;
     public static int kills;
+    public static int EnterType;
     [SerializeField] private Animator ani;
     [SerializeField] private TextMeshProUGUI Text;
     [SerializeField] private int[] stagekillrequiered;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (EnterType == 1)
+        {
+            RestartStage();
+            EnterType = 3;
+        }
+        else if (EnterType == 2)
+        {
+            LoadStage();
+            EnterType = 3;
+        }
         StageStart();
     }
 
@@ -64,6 +75,14 @@ public class StageManager : MonoBehaviour
 
     public void LoadStage()
     {
+        StageData data = SaveSystem.LoadStage();
+        Debug.Log(data.stage);
+        currentstage = data.stage;
+    }
+
+    public void RestartStage()
+    {
+        SaveSystem.DeleteStage();
         StageData data = SaveSystem.LoadStage();
         Debug.Log(data.stage);
         currentstage = data.stage;

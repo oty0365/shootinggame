@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ButtonOnhover : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] tmpro;
@@ -54,5 +54,21 @@ public class ButtonOnhover : MonoBehaviour
         onhover[3] = false;
         tmpro[3].color = Color.white;
     }
-    
+
+    public void OnClick0()
+    {
+        StageManager.EnterType = 1;
+        SceneManager.LoadScene("Stage1");
+    }
+
+    public void OnClick1()
+    {
+        StageManager.EnterType = 2;
+        SceneManager.LoadScene("Stage1");
+    }
+
+    public void OnClick2()
+    {
+        Application.Quit();
+    }
 }
