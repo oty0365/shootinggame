@@ -70,4 +70,19 @@ public class SaveSystem
             return null;
         }
     }
+
+    public static StageData DeleteStage()
+    {
+        string path = Application.persistentDataPath + "/stage.fun";
+        if (File.Exists(path))
+        {
+            File.Delete(path);
+            return null;
+        }
+        else
+        {
+            Debug.LogError("File Not Found");
+            return null;
+        }
+    }
 }
