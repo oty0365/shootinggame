@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class ButtonOnhover : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI[] tmpro;
-
     public bool[] onhover;
     // Start is called before the first frame update
 
@@ -66,9 +65,9 @@ public class ButtonOnhover : MonoBehaviour
         StageData data = SaveSystem.LoadStage();
         if (data != null)
         {
-            StageManager.EnterType = 2;
-            SceneManager.LoadScene("Stage1");   
+            SceneManager.LoadScene(data.stage); 
         }
+        StageManager.EnterType = 2;
     }
 
     public void OnClick2()
