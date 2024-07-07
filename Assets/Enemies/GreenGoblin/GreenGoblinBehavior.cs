@@ -61,11 +61,6 @@ public class GreenGoblinBehavior : MonoBehaviour
                 sr.sprite = sprites[3];
                 rb.gravityScale = 14f;
                 break;
-            default:
-                isdistroid = true;
-                sr.sprite = sprites[3];
-                rb.gravityScale = 14f;
-                break;
         }
     }
 }
