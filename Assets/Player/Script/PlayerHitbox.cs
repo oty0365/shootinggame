@@ -10,7 +10,6 @@ public class PlayerHitbox : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("enemy"))
         {
-            Debug.Log(1);
             PlayerStatus.playerhp--;
         }
     }
